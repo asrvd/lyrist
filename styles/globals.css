@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +14,235 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Home Page Styles */
+
+.lyrics-container {
+  font-family: 'Pangolin', cursive;
+  width: 40%;
+  height: 60%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  font-family: 'Pangolin', cursive;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pangolin', cursive;
+  font-weight: 400;
+  text-align: center;
+}
+
+.footer-container p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer-container a {
+  font-weight: 600;
+}
+
+.header-head {
+  text-align: center;
+}
+
+.header-head h1 {
+  cursor: pointer;
+  font-size: 5rem;
+  font-weight: 600;
+  font-family: 'Patrick Hand', cursive;
+}
+.header-head p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.header-body p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.header-body a {
+  text-decoration: underline;
+  color: slateblue;
+}
+
+.lyrics-main {
+  height: 100%;
+  width: 100%;
+}
+
+.lyrics-input {
+  height: 15%;
+  display: flex;
+}
+
+.lyrics-content {
+  height: 85%;
+}
+
+.lyrics-content {
+  overflow-y: scroll !important;
+}
+
+.lyrics {
+  margin: 0 !important;
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 8px;
+  height:8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EDF2F7;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A0AEC0;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A0AEC0;
+}
+
+@media screen and (max-width: 768px) {
+  .lyrics-container {
+    width: 95%;
+    height: 70%;
+  }
+  .header-container {
+    height: 20%;
+  }
+  .header-head {
+    text-align: center;
+  }
+  .header-head h1 {
+    font-size: 3rem;
+  }
+  .header-head p {
+    font-size: 1rem;
+  }
+  .header-body p {
+    font-size: 0.8rem;
+  }
+  .header-body a {
+    font-size: 0.8rem;
+  }
+  .lyrics-main {
+    height: 90%;
+  }
+  .lyrics-input {
+    height: 10%;
+  }
+  .lyrics-content {
+    height: 90%;
+  }
+  .footer-container p {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .lyrics-container {
+    width: 70%;
+    height: 60%;
+  }
+  .header-container {
+    height: 30%;
+  }
+  .header-head {
+    text-align: center;
+  }
+  .header-head h1 {
+    font-size: 4rem;
+  }
+  .header-head p {
+    font-size: 1.5rem;
+  }
+  .header-body p {
+    font-size: 1rem;
+  }
+  .header-body a {
+    font-size: 1rem;
+  }
+  .lyrics-input {
+    height: 10%;
+  }
+  .lyrics-content {
+    height: 90%;
+  }
+}
+
+/* Guide Page Styles */
+
+.guide-container {
+  height: 60%;
+  width: 45%;
+}
+
+.guide-container h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.guide-container p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Patrick Hand', cursive;
+  margin-bottom: 10px !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .guide-container {
+    width: 70%;
+    height: 60%;
+  }
+  .guide-container h2 {
+    font-size: 1.5rem;
+  }
+  .guide-container p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .guide-container {
+    width: 95%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .guide-container h2 {
+    font-size: 1.2rem;
+  }
+  .guide-container p {
+    font-size: 0.8rem;
+  }
+  code {
+    font-size: 0.6rem !important;
+  }
 }
