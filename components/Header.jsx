@@ -5,14 +5,14 @@ export default function Header() {
     return (
         <div className="header-container">
             <div className="header-head">
-                <Link href="/"><h1>lyriks</h1></Link>
+                <Link href="/"><h1>lyrist</h1></Link>
                 <p>yet another simple & RESTful lyrics API</p>
             </div>
             <div className="header-body">
                 <samp>
                     <p>
                         <Link href="/guide">guide</Link>.
-                        <a href="https://github.com/asheeeshh/lyriks">github</a>.
+                        <a href="https://github.com/asheeeshh/lyrist">github</a>.
                         <a href="">discord</a>
                     </p>
                 </samp>

@@ -25,7 +25,7 @@ export default function Search(props) {
     }
     async function handleClick() {
         if (track.length >= 2) {
-            await fetch(`http://localhost:3000/api/${track[0]}/${track[1]}`).then(
+            await fetch(`http://lyrist.vercel.app/api/${track[0]}/${track[1]}`).then(
             res => {
                 if (res.status === 200) {
                     return res.json()
@@ -51,7 +51,7 @@ export default function Search(props) {
     async function handleEnter(e) {
         if (e.key === 'Enter') {
             if (track.length >= 2) {
-                await fetch(`http://localhost:3000/api/${track[0]}/${track[1]}`).then(
+                await fetch(`http://lyrist.vercel.app/api/${track[0]}/${track[1]}`).then(
                 res => {
                     if (res.status === 200) {
                         return res.json()
