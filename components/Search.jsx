@@ -51,7 +51,7 @@ export default function Search(props) {
     async function handleEnter(e) {
         if (e.key === 'Enter') {
             if (track.length >= 2) {
-                await fetch(`httsp://lyrist.vercel.app/api/${track[0]}/${track[1]}`).then(
+                await fetch(`https://lyrist.vercel.app/api/${track[0]}/${track[1]}`).then(
                 res => {
                     if (res.status === 200) {
                         return res.json()
