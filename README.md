@@ -27,11 +27,11 @@ You can play with the API <a href="https://lyrist.now.sh/">here</a>. I created t
 
 Clone the repository
 ```bash
-$ git clone https://github.com/asheeeshh/waifus-for-programmers.git
+$ git clone https://github.com/asheeeshh/lyrist.git
 ```
 Install dependencies
 ```bash
-$ cd waifus-for-programmers
+$ cd lyrist
 $ npm i
 ```
 Run the app
