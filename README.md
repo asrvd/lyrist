@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img align="center" src="https://i.imgur.com/Q6VxcWl.png" width="600px" height="200px"/>
+  <samp>
+    <p>
+        <a href="https://lyrist.now.sh/">playground</a> .
+        <a href="https://lyrist.now.sh/guide/">guide</a> .
+        <a href="">discord</a>
+    </p>
+  </samp>
+  <img src="https://api.visitorbadge.io/api/VisitorHit?user=asheeeshh&repo=lyrist&countColor=%2337d67a" />
+  <img src="https://img.shields.io/github/license/asheeeshh/lyrist?color=%2337d67a&style=for-the-badge" />
+  <img src="https://vercelbadge.vercel.app/api/asheeeshh/lyrist?style=for-the-badge&color=%2337d67a" />
+</div>
 
-## Getting Started
+## Overview
+Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using song name and it's artist name. It's easy to use and just works.</br>
+You can play with the API <a href="https://lyrist.now.sh/">here</a>. I created this API as a starting project for learning Next.js.
 
-First, run the development server:
+## Tech Stack
+- [Next.js](https://nextjs.org/) for API and Frontend.
+- [ChakraUI](https://chakra-ui.com/) for UI Components.
+- [LyricsDumper](https://www.npmjs.com/package/lyrics-dumper) for getting lyrics.
+- [ReactIcons](https://react-icons.github.io/react-icons/) for Icons.
+- [Vercel](https://vercel.app/) for Deploying.
 
+## Run locally
+
+Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
+$ git clone https://github.com/asheeeshh/waifus-for-programmers.git
+```
+Install dependencies
+```bash
+$ cd waifus-for-programmers
+$ npm i
+```
+Run the app
+```bash
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Fork the repository.
+- Make your changes in a separate branch.
+- Open a pull request.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Contributors
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<a href="https://github.com/asheeeshh/lyrist/graphs/contributors">
+  <img src="https://stg.contrib.rocks/image?repo=asheeeshh/lyrist" />
+</a>
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Ending Note
+- Consider giving the repo a ⭐ if you liked the project!
+- Checkout my other projects!
+</br>
+<div align="center">
+   <img src="https://img.shields.io/badge/Made%20With-%E2%9D%A4-%2337d67a?style=for-the-badge" /></br>
+   <a href="https://vercel.com?utm_source=lyrist"><img src="https://raw.githubusercontent.com/abumalick/powered-by-vercel/master/powered-by-vercel.svg" /></a>
+</div>
