@@ -13,6 +13,12 @@ export default function Home() {
         <title>lyrist</title>
         <meta name="description" content="lyrics api that just works." />
         <script async defer data-website-id="29e9b38d-3fb5-4cf6-a120-1731741019e1" src="https://umami.asheeshh.ga/umami.js"></script>
+        <script
+          src="https://ponsor.vercel.app/scripts/embed.min.js"
+          async
+          defer
+          data-widget-id="cl5s4kjb30010zwufuqoskws9"
+        ></script>
         <link rel="icon" href="https://favmoji.asheeshh.ga/🎧" />
       </Head>
       <Header />
