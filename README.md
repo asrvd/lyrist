@@ -54,8 +54,3 @@ $ npm run dev
 ## Ending Note
 - Consider giving the repo a ⭐ if you liked the project!
 - Checkout my other projects!
-</br>
-<div align="center">
-   <img src="https://img.shields.io/badge/Made%20With-%E2%9D%A4-%2337d67a?style=for-the-badge" /></br>
-   <a href="https://vercel.com?utm_source=lyrist"><img src="https://raw.githubusercontent.com/abumalick/powered-by-vercel/master/powered-by-vercel.svg" /></a>
-</div>
