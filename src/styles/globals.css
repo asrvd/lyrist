@@ -1,0 +1,12 @@
+@import url(https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap);
+@import url(https://fonts.bunny.net/css?family=space-mono:400,700);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  color-schema: dark;
+}
+

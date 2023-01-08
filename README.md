@@ -4,7 +4,7 @@
     <p>
         <a href="https://lyrist.now.sh/">playground</a> .
         <a href="https://lyrist.now.sh/guide/">guide</a> .
-        <a href="">discord</a>
+        <a href="https://twitter.com/_asheeshh">twitter</a>
     </p>
   </samp>
   <img src="https://api.visitorbadge.io/api/VisitorHit?user=asheeeshh&repo=lyrist&countColor=%2337d67a" />
@@ -13,30 +13,29 @@
 </div>
 
 ## Overview
-Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using song name and it's artist name. It's easy to use and just works.</br>
+Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using the song's name and its artist's name. It's easy to use and just works.</br>
 You can play with the API <a href="https://lyrist.now.sh/">here</a>. I created this API as a starting project for learning Next.js.
 
 ## Tech Stack
-- [Next.js](https://nextjs.org/) for API and Frontend.
-- [ChakraUI](https://chakra-ui.com/) for UI Components.
+- [Next.js](https://nextjs.org/) as Framework.
+- [Tailwind CSS](https://tailwindcss.com) for Styling.
 - [LyricsDumper](https://www.npmjs.com/package/lyrics-dumper) for getting lyrics.
-- [ReactIcons](https://react-icons.github.io/react-icons/) for Icons.
 - [Vercel](https://vercel.app/) for Deploying.
 
 ## Run locally
 
 Clone the repository
 ```bash
-$ git clone https://github.com/asheeeshh/lyrist.git
+$ git clone https://github.com/asrvd/lyrist.git
 ```
 Install dependencies
 ```bash
 $ cd lyrist
-$ npm i
+$ pnpm i // or npm
 ```
 Run the app
 ```bash
-$ npm run dev
+$ pnpm run dev // or npm
 ```
 
 ## Contributing
@@ -54,3 +53,4 @@ $ npm run dev
 ## Ending Note
 - Consider giving the repo a ⭐ if you liked the project!
 - Checkout my other projects!
+- Consider sponsoring me to help me build more projects like this.
