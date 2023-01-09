@@ -25,8 +25,8 @@ const Home: NextPage = () => {
   };
 
   const handleClick = async () => {
-    if (trackName.trim() === "" || artistName.trim() === "") {
-      toast.error("Please enter both track name and artist name");
+    if (trackName.trim() === "") {
+      toast.error("Track name can't be empty!");
     } else {
       const res = await fetch(`/api/${trackName}/${artistName}`);
       if (res.ok) {
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
           <div className="flex w-full items-center justify-start gap-4">
             <input
               className="w-full rounded-md border border-zinc-600 bg-zinc-800/60 px-4 py-2 text-pink-100 shadow-xl outline-0 placeholder:text-zinc-400 hover:outline-0"
-              placeholder="Enter artist name"
+              placeholder="Enter artist name (leave blank if unknown)"
               onChange={handleArtistChange}
             ></input>
             <button

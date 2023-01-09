@@ -6,14 +6,13 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     const { query } = req.query;
-    if (query?.length === 2) {
+    if (query && query?.length <= 2 && query?.length !== 0) {
       try {
         const lyrics = await getLyrics(
           `${decodeURIComponent(query[0] as string)} ${decodeURIComponent(
-            query[1] as string
+            query?.length > 1 ? (query[1] as string) : ""
           )}`
         );
-
         res.setHeader(
           "Cache-Control",
           "public, s-maxage=86400, stale-while-revalidate=43200"
