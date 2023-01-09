@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 
 const responseObject = `{
-  "title": "fumes",
+  "title": "Fumes",
   "artist": "EDEN",
   "lyrics": "The morning light...",
   "source": "Musixmatch"
