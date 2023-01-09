@@ -1,5 +1,5 @@
 <div align="center">
-  <img align="center" src="https://i.imgur.com/Q6VxcWl.png" width="600px" height="200px"/>
+  <img align="center" src="https://user-images.githubusercontent.com/68690233/211316118-3adf4ec2-4082-46c2-979e-7d2127290532.png" width="600px" height="250px"/>
   <samp>
     <p>
         <a href="https://lyrist.now.sh/">playground</a> .

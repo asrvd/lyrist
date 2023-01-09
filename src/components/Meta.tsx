@@ -22,8 +22,14 @@ export default function Meta() {
         property="twitter:description"
         content="simple yet powerful RESTful lyrics API"
       />
-      <meta property="og:image" content="/img/og-image.png" />
-      <meta property="twitter:image" content="/img/og-image.png" />
+      <meta
+        property="og:image"
+        content="https://user-images.githubusercontent.com/68690233/211316118-3adf4ec2-4082-46c2-979e-7d2127290532.png"
+      />
+      <meta
+        property="twitter:image"
+        content="https://user-images.githubusercontent.com/68690233/211316118-3adf4ec2-4082-46c2-979e-7d2127290532.png"
+      />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:site" content="@asheeshh_" />
     </Head>
