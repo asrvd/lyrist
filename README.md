@@ -13,8 +13,8 @@
 </div>
 
 ## Overview
-Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using the song's name and its artist's name. It's easy to use and just works.</br>
-You can play with the API <a href="https://lyrist.now.sh/">here</a>. I created this API as a starting project for learning Next.js.
+Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using the song's name and its artist's name. It's easy to use and just works. To prevent misuse of the APi, every user is only allowed to make 150 requests per hour.</br>
+You can play with the API <a href="https://lyrist.now.sh/">here</a>. Fun Fact: I had created this API as a starting project for learning Next.js.
 
 ## Tech Stack
 - [Next.js](https://nextjs.org/) as Framework.
