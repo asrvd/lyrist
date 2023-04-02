@@ -2,14 +2,18 @@
 
 import { type NextPage } from "next";
 import { useState } from "react";
-import type { LyricsOutput } from "lyrics-dumper";
 import { CheckIcon } from "../components/Icons/Check";
 import { CopyIcon } from "../components/Icons/Copy";
 import Layout from "../components/Layout";
 import { toast } from "react-hot-toast";
 
+type Lyrics = {
+  lyrics: string;
+  id: string;
+};
+
 const Home: NextPage = () => {
-  const [lyrics, setLyrics] = useState<LyricsOutput | null>(null);
+  const [lyrics, setLyrics] = useState<Lyrics | null>(null);
   const [trackName, setTrackName] = useState<string>("");
   const [artistName, setArtistName] = useState<string>("");
   const [copied, setCopied] = useState<boolean>(false);
@@ -30,10 +34,15 @@ const Home: NextPage = () => {
     } else {
       const res = await fetch(`/api/${trackName}/${artistName}`);
       if (res.ok) {
-      const data = (await res.json()) as LyricsOutput;
-      setLyrics(data);
+        const data = (await res.json()) as Lyrics;
+        setLyrics(data);
       } else {
-        toast.error("Lyrics not found!")
+        if (res.status === 429) {
+          toast.error("Rate limit exceeded!");
+          return;
+        } else {
+          toast.error("Lyrics not found!");
+        }
       }
     }
   };
