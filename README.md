@@ -54,3 +54,9 @@ $ pnpm run dev // or npm
 - Consider giving the repo a ⭐ if you liked the project!
 - Checkout my other projects!
 - Consider sponsoring me to help me build more projects like this.
+
+<p align="center">
+  <a rel="noopener noreferrer" target="_blank" href="https://vercel.com/?utm_source=asheeeshh&utm_campaign=oss">
+    <img height="34px" src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by vercel">
+  </a>
+</p>

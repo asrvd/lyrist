@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@brandond/findthelyrics': ^2.0.5
   '@types/node': ^18.11.18
   '@types/prettier': ^2.7.2
   '@types/react': ^18.0.26
@@ -12,7 +11,7 @@ specifiers:
   autoprefixer: ^10.4.7
   eslint: ^8.30.0
   eslint-config-next: 13.1.1
-  lru-cache: ^8.0.4
+  genius-lyrics: ^4.4.3
   next: 13.1.1
   postcss: ^8.4.14
   prettier: ^2.8.1
@@ -27,8 +26,7 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@brandond/findthelyrics': 2.0.5
-  lru-cache: 8.0.4
+  genius-lyrics: 4.4.3
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -70,12 +68,6 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
     dev: true
-
-  /@brandond/findthelyrics/2.0.5:
-    resolution: {integrity: sha512-BYrF7P8VS3jeoPvDw2vBx7pWGUguY7DSOM+zyS1Nccd3xzugE/Mooc3wtUtcvbzyfxe+UrDurht3dO7rpiFdAw==}
-    dependencies:
-      cheerio: 1.0.0-rc.12
-    dev: false
 
   /@eslint/eslintrc/1.4.1:
     resolution: {integrity: sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==}
@@ -654,6 +646,13 @@ packages:
       node-releases: 2.0.8
       update-browserslist-db: 1.0.10_browserslist@4.21.4
     dev: true
+
+  /busboy/1.6.0:
+    resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
+    engines: {node: '>=10.16.0'}
+    dependencies:
+      streamsearch: 1.1.0
+    dev: false
 
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
@@ -1393,6 +1392,13 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
+  /genius-lyrics/4.4.3:
+    resolution: {integrity: sha512-06L8GUg49FrUYEmSQvrSH74RH5S+qyerHwBpvk8vZLwWgpEw4mIWZDob5IpXT1ryhqazM9K6CXGNucKYPO8kng==}
+    dependencies:
+      cheerio: 1.0.0-rc.12
+      undici: 5.21.2
+    dev: false
+
   /get-intrinsic/1.1.3:
     resolution: {integrity: sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==}
     dependencies:
@@ -1826,11 +1832,6 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
-
-  /lru-cache/8.0.4:
-    resolution: {integrity: sha512-E9FF6+Oc/uFLqZCuZwRKUzgFt5Raih6LfxknOSAVTjNkrCZkBf7DQCwJxZQgd9l4eHjIJDGR+E+1QKD1RhThPw==}
-    engines: {node: '>=16.14'}
-    dev: false
 
   /merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -2394,6 +2395,11 @@ packages:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
 
+  /streamsearch/1.1.0:
+    resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
+    engines: {node: '>=10.0.0'}
+    dev: false
+
   /string.prototype.matchall/4.0.8:
     resolution: {integrity: sha512-6zOCOcJ+RJAQshcTvXPHoxoQGONa3e/Lqx90wUA+wEzX78sg5Bo+1tQo4N0pohS0erG9qtCqJDjNCQBjeWVxyg==}
     dependencies:
@@ -2601,6 +2607,13 @@ packages:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
     dev: true
+
+  /undici/5.21.2:
+    resolution: {integrity: sha512-f6pTQ9RF4DQtwoWSaC42P/NKlUjvezVvd9r155ohqkwFNRyBKM3f3pcty3ouusefNRyM25XhIQEbeQ46sZDJfQ==}
+    engines: {node: '>=12.18'}
+    dependencies:
+      busboy: 1.6.0
+    dev: false
 
   /update-browserslist-db/1.0.10_browserslist@4.21.4:
     resolution: {integrity: sha512-OztqDenkfFkbSG+tRxBeAnCVPckDBcvibKd35yDONx6OU8N7sqgwc7rCbkJ/WcYtVRZ4ba68d6byhC21GFh7sQ==}

@@ -9,8 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@brandond/findthelyrics": "^2.0.5",
-    "lru-cache": "^8.0.4",
+    "genius-lyrics": "^4.4.3",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
