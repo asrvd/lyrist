@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 
 import { type NextPage } from "next";
-import { useState } from "react";
+import { type KeyboardEvent, useState } from "react";
 import { CheckIcon } from "../components/Icons/Check";
 import { CopyIcon } from "../components/Icons/Copy";
 import Layout from "../components/Layout";
@@ -47,6 +47,12 @@ const Home: NextPage = () => {
     }
   };
 
+  const handleEnterPress = async (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.code === "Enter") {
+        await handleClick();
+    }
+  }
+
   const handleCopy = () => {
     navigator.clipboard
       .writeText(lyrics?.lyrics || "")
@@ -77,12 +83,14 @@ const Home: NextPage = () => {
             className="w-full rounded-md border border-zinc-600 bg-zinc-800/60 px-4 py-2 text-pink-100 shadow-xl outline-0 placeholder:text-zinc-400 hover:outline-0"
             placeholder="Enter track name"
             onChange={handleTrackChange}
+            onKeyUp={handleEnterPress}
           ></input>
           <div className="flex w-full items-center justify-start gap-4">
             <input
               className="w-full rounded-md border border-zinc-600 bg-zinc-800/60 px-4 py-2 text-pink-100 shadow-xl outline-0 placeholder:text-zinc-400 hover:outline-0"
               placeholder="Enter artist name (leave blank if unknown)"
               onChange={handleArtistChange}
+              onKeyUp={handleEnterPress}
             ></input>
             <button
               className="rounded-md border border-zinc-600 bg-zinc-800/90 px-4 py-2 text-pink-100 shadow-xl duration-300 hover:bg-zinc-800/60"
