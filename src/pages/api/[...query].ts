@@ -33,7 +33,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           });
         } catch (error) {
           console.log(error);
-          return res.status(404).json({ error: error });
+          return res.status(404).json({ error: "Lyrics not found" });
         }
       } else {
         return res.status(400).json({ error: "Bad request" });
