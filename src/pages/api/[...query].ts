@@ -8,11 +8,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const { query } = req.query;
       if (query && query?.length <= 2 && query?.length !== 0) {
         try {
-          console.log(
-            `${decodeURIComponent(query[0] as string)} ${decodeURIComponent(
-              query?.length > 1 ? (query[1] as string) : ""
-            )}`
-          );
           const searches = await client.songs.search(
             `${decodeURIComponent(query[0] as string)} ${decodeURIComponent(
               query?.length > 1 ? (query[1] as string) : ""
@@ -20,12 +15,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           );
           const song = searches[0];
           const lyrics = await song?.lyrics();
-          console.log(lyrics);
           res.setHeader(
             "Cache-Control",
             "public, s-maxage=86400, stale-while-revalidate=43200"
           );
           res.setHeader("Content-Type", "application/json");
+          res.setHeader("Access-Control-Allow-Origin", "*");
+
           return res.status(200).json({
             lyrics: lyrics,
             title: song?.title,
