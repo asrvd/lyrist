@@ -103,7 +103,7 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="lyrics relative h-[400px] max-h-[400px] w-full overflow-y-scroll rounded-md border border-zinc-600 bg-zinc-800/60 p-4 text-sm text-pink-100 shadow-xl scrollbar-thin scrollbar-track-transparent scrollbar-thumb-zinc-700/50 scrollbar-thumb-rounded-md md:h-[250px] md:max-h-[250px]">
+        <div className="lyrics relative h-[400px] max-h-[400px] w-full overflow-y-scroll rounded-md border border-zinc-600 bg-zinc-800/60 p-4 text-sm text-pink-100 shadow-xl scrollbar-thin scrollbar-track-transparent scrollbar-thumb-zinc-700/50 scrollbar-thumb-rounded-md sm:h-[250px] sm:max-h-[250px] md:h-[350px] md:max-h-[350px] lg:h-[500px] lg:max-h-[500px]">
           <button
             onClick={handleCopy}
             className="duration:300 absolute top-[1rem] right-[1rem] z-[1000] rounded-md border border-zinc-600 bg-zinc-800/60 p-[0.35rem] text-base text-pink-100 shadow duration-300 hover:bg-zinc-700/40"
