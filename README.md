@@ -13,7 +13,7 @@
 </div>
 
 ## Overview
-Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using the song's name and its artist's name. It's easy to use and just works. To prevent misuse of the APi, every user is only allowed to make 150 requests per hour.</br>
+Lyrist is a simple yet powerful RESTful API for getting lyrics of any song using the song's name and its artist's name. It's easy to use and just works. To prevent misuse of the API, every user is rate limited to 50 requests per hour based on their IP address.</br>
 You can play with the API <a href="https://lyrist.now.sh/">here</a>. Fun Fact: I had created this API as a starting project for learning Next.js.
 
 ## Tech Stack
@@ -33,6 +33,15 @@ Install dependencies
 $ cd lyrist
 $ pnpm i // or npm
 ```
+
+Set up environment variables
+```bash
+# Create a .env file with the following variables
+UPSTASH_REDIS_REST_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
+# Get these credentials by creating a free Redis database at https://upstash.com/
+```
+
 Run the app
 ```bash
 $ pnpm run dev // or npm

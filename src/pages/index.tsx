@@ -9,7 +9,9 @@ import { toast } from "react-hot-toast";
 
 type Lyrics = {
   lyrics: string;
-  id: string;
+  title: string;
+  artist: string;
+  image: string;
 };
 
 const Home: NextPage = () => {
@@ -35,6 +37,7 @@ const Home: NextPage = () => {
       const res = await fetch(`/api/${trackName}/${artistName}`);
       if (res.ok) {
         const data = (await res.json()) as Lyrics;
+        console.log(data);
         setLyrics(data);
       } else {
         if (res.status === 429) {
@@ -49,9 +52,9 @@ const Home: NextPage = () => {
 
   const handleEnterPress = async (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.code === "Enter") {
-        await handleClick();
+      await handleClick();
     }
-  }
+  };
 
   const handleCopy = () => {
     navigator.clipboard
@@ -107,9 +110,11 @@ const Home: NextPage = () => {
           >
             {copied ? <CheckIcon /> : <CopyIcon />}
           </button>
-          <p className="whitespace-pre-line">
-            {lyrics?.lyrics || "Nothing here yet ..."}
-          </p>
+          {lyrics?.lyrics.split("\n").map((line, index) => (
+            <p key={index} className="whitespace-pre-line">
+              {line}
+            </p>
+          ))}
         </div>
       </section>
     </Layout>

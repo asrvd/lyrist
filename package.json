@@ -9,8 +9,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@upstash/ratelimit": "^2.0.5",
+    "@upstash/redis": "^1.34.5",
     "@vercel/analytics": "^1.2.2",
-    "genius-lyrics": "^4.4.3",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
