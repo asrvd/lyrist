@@ -6,13 +6,35 @@ const nullishQueries = ["None", "N/A", "null", "undefined"];
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    // Set CORS headers for all requests
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+    );
+
+    // Handle OPTIONS method for preflight requests
+    if (req.method === "OPTIONS") {
+      return res.status(200).end();
+    }
+
     if (req.method === "GET") {
-      const ip = process.env.NODE_ENV === "development" ? "127.0.0.1" : req.headers["x-forwarded-for"] || req.headers["x-real-ip"];
+      const ip =
+        process.env.NODE_ENV === "development"
+          ? "127.0.0.1"
+          : req.headers["x-forwarded-for"] || req.headers["x-real-ip"];
       if (!ip) {
         return res.status(400).json({ error: "Bad request" });
       }
       // Apply rate limiting
-      const { success, limit, reset, remaining } = await ratelimit.limit(ip as string);
+      const { success, limit, reset, remaining } = await ratelimit.limit(
+        ip as string
+      );
 
       // Set rate limit headers
       res.setHeader("X-RateLimit-Limit", limit.toString());
@@ -45,7 +67,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             "public, s-maxage=86400, stale-while-revalidate=43200"
           );
           res.setHeader("Content-Type", "application/json");
-          res.setHeader("Access-Control-Allow-Origin", "*");
 
           return res.status(200).json({
             lyrics: lyrics.lyrics,

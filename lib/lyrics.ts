@@ -36,8 +36,17 @@ export const fetchLyricsMetadata = async (
       searchTerm
     )}`;
 
+    // Define headers to mimic a browser request
+    const headers = {
+      Accept: "application/json",
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      Referer: "https://genius.com/",
+      Origin: "https://genius.com",
+    };
+
     // Make the API request
-    const response = await axios.get<GeniusApiResponse>(target);
+    const response = await axios.get<GeniusApiResponse>(target, { headers });
     const data = response.data;
 
     // Check if we have valid data
