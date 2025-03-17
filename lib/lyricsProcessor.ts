@@ -57,7 +57,7 @@ export const getLyrics = async (query: string): Promise<LyricsResult> => {
       }
 
       const targetHtml = await axios.get(res.url, { headers: headers });
-      let $ = cheerio.load(targetHtml.data);
+      let $ = cheerio.load(targetHtml.data as string);
 
       // Use the correct selector for lyrics containers
       const data1 = $("[data-lyrics-container]");
